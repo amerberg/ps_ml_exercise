@@ -56,7 +56,7 @@ class SimilarityCalculator(object):
     def course_tags_file(self):
         return self.data_file_path('course_tags.csv')
         
-    def get_interests_data(self):
+    def get_interests(self):
         """Construct a dataframe indicating which users have which interest."""
         return pd.read_csv(self.user_interests_file, usecols=['user_handle', 'interest_tag'])\
             .drop_duplicates()\
@@ -91,7 +91,7 @@ class SimilarityCalculator(object):
 
 
     def scores(self):
-        return cosine_similarity(self.all_features)
+        return cosine_similarity(self.all_features())
 
     def all_summaries(self, n=10):
         return top_scores(self.scores(), n)

@@ -6,8 +6,10 @@ USER_SIMILARITY_DB_URL=[db_url]
 python setup.py path_to_data
 ```
 Here `[db_url]` can be replaced with any valid SQLALchemy
-[database URL](http://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls) (an easy approach is to use SQLite, e.g. sqlite:///example.sqlite) and
+[database URL](http://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls) and
 `path_to_data` is a path to a local folder containing the data file.
+An easy approach is to use SQLite for storage, e.g. sqlite:////path/to/database.sqlite.
+(I have only been successful in using absolute paths in the database URL.)
 
 # Using the API
 The API can be deployed on port 5000 using the Flask built-in web server by running
