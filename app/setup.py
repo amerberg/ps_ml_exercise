@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 from argparse import ArgumentParser
 import os
 
-from .schema import Base
-from .similarity import SimilarityCalculator
+from schema import Base
+from similarity import SimilarityCalculator
 
 
 if __name__ == "__main__":
