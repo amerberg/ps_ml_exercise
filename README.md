@@ -2,7 +2,7 @@
 To set up the database, cd to the `app` directory and then run
 
 ```
-USER_SIMILARITY_DB_URL=[db_url]
+export USER_SIMILARITY_DB_URL=[db_url]
 python setup.py path_to_data
 ```
 Here `[db_url]` can be replaced with any valid SQLALchemy
@@ -17,7 +17,7 @@ On my 4+-year old computer, this takes about 90 seconds.
 # Using the API
 The API can be deployed on port 5000 using the Flask built-in web server by running
 ```
-USER_SIMILARITY_DB_URL=[db_url]
+export USER_SIMILARITY_DB_URL=[db_url]
 python run.py
 ```
 Then, for instance, one can request http://127.0.0.1:5000/user/1. The API can also be deployed on a production server, e.g. gunicorn.
