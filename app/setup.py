@@ -16,5 +16,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
     
     sc = SimilarityCalculator(args.data_dir)
-    summaries = sc.all_summaries
+    summaries = sc.all_summaries()
     summaries.to_sql('users', engine, index=False, if_exists='append')
