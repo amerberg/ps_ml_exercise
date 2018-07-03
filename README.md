@@ -1,5 +1,5 @@
 # Setup
-To set up the database, cd to the `app` directory and then run
+To set up the database, install the dependencies using `pip` and then cd to the `app` directory and run
 
 ```
 export USER_SIMILARITY_DB_URL=[db_url]
