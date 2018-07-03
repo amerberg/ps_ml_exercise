@@ -1,8 +1,10 @@
-from schema import Base
 from sqlalchemy import create_engine
-from similarity import SimilarityCalculator
 from argparse import ArgumentParser
 import os
+
+from .schema import Base
+from .similarity import SimilarityCalculator
+
 
 if __name__ == "__main__":
     db_url = os.environ['USER_SIMILARITY_DB_URL']
