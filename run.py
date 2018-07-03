@@ -4,8 +4,10 @@ from eve_sqlalchemy.validation import ValidatorSQL
 from schema import Base
 import json
 
+
 def parse_field(resource, response):
-    response['most_similar'] = {"similar_user_{}".format(k): v for k, v in json.loads(response['most_similar']).items()}
+    """Parse the JSON field, and convert keys to strings in case the user wants XML output."""
+    response['most_similar'] = {"most_similar_{}".format(k): v for k, v in json.loads(response['most_similar']).items()}
 
 
 if __name__ == '__main__':
