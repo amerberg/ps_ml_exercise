@@ -27,3 +27,5 @@ This repository has been tested using python 3.6 with the following packages:
    + numpy 1.11.3
    + scikit-learn 0.18.1
 
+# Testing
+A very limited number of tests are included. They can be executed by running `pytest` from the repository root.
