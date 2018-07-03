@@ -20,7 +20,7 @@ The API can be deployed on port 5000 using the Flask built-in web server by runn
 export USER_SIMILARITY_DB_URL=[db_url]
 python run.py
 ```
-Then, for instance, one can request http://127.0.0.1:5000/user/1. The API can also be deployed on a production server, e.g. gunicorn.
+Then, for instance, one can request http://127.0.0.1:5000/user/1. Like any Flask app, the API can also be deployed on a production server, e.g. gunicorn.
 
 # Requirements
 This repository has been tested using python 3.6 with the following packages:
