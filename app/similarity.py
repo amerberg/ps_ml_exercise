@@ -8,7 +8,7 @@ def most_similar(scores, user_handle, n=10):
     """Identify the highest similarity scores for a given user."""
     summary = scores.loc[:, [user_handle]] \
         .nlargest(n + 1, columns=user_handle) \
-        .drop(labels=user_handle, axis=0) \
+        .drop(labels=user_handle, axis=0, errors='ignore') \
         .head(n=n) \
         .reset_index() \
         .rename(columns={user_handle: 'score'})
