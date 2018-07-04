@@ -20,17 +20,20 @@ The API can be deployed on port 5000 using the Flask built-in web server by runn
 export USER_SIMILARITY_DB_URL=[db_url]
 python run.py
 ```
-Then, for instance, one can request http://127.0.0.1:5000/user/1. Like any Flask app, the API can also be deployed on a production server, e.g. gunicorn.
+Then, for instance, one can request http://127.0.0.1:5000/user/1. 
+Like any Flask app, the API can also be deployed on a production server, e.g. gunicorn.
+As of July 3, I have a demo online at http://54.213.167.161/, so one can request, e.g. http://54.213.167.161/user/23.
 
 # Requirements
 This repository has been tested using python 3.6 with the following packages:
 
    + eve 0.6.4
-   + sqlalchemy
+   + sqlalchemy 1.2.9
    + eve-sqlalchemy 0.5.0
    + pandas 0.19.2
    + numpy 1.11.3
    + scikit-learn 0.18.1
+   + scipy 1.1.0
 
 # Testing
 A very limited number of tests are included. They can be executed by running `pytest` from the repository root.
