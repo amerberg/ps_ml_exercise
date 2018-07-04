@@ -10,9 +10,10 @@ def parse_field(resource, response):
     response['most_similar'] = {"most_similar_{}".format(k): v for k, v in json.loads(response['most_similar']).items()}
 
 
+app = Eve(validator=ValidatorSQL, data=SQL)
+Base.metadata.bind = app.data.driver.engine
+app.data.driver.Model = Base
+app.on_fetched_item += parse_field
+
 if __name__ == '__main__':
-    app = Eve(validator=ValidatorSQL, data=SQL)
-    Base.metadata.bind = app.data.driver.engine
-    app.data.driver.Model = Base
-    app.on_fetched_item += parse_field
     app.run(debug=True)
